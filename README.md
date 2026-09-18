@@ -1,55 +1,75 @@
-# RETINA — Android Releases
+# RETINA — Windows + Android Releases
 
-**RETINA** is an offline AI-assisted diabetic retinopathy research prototype for color fundus image analysis.
+**RETINA** is an offline AI-assisted diabetic retinopathy research prototype for supported color fundus image analysis.
 
-This public repository is used **only to distribute signed Android APK releases**.
+This public repository is used **only to distribute final Windows and Android application builds**.
 
-> The main RETINA source code, research scripts, model-development files, and technical project history are maintained separately in a private repository.
+> The main RETINA source code, research scripts, model-development files, and technical project history remain in a separate private repository.
 
-## Download
+## Downloads
 
-The latest Android release will be available from the **Releases** section of this repository.
+The final public release should contain:
 
-Once a release is published, the permanent latest-download format is:
+- **Android:** `RETINA_ANDROID_FINAL.apk`
+- **Windows:** `RETINA_WINDOWS_FINAL.zip`
+- **Checksums:** `RETINA_FINAL_SHA256.txt`
 
+After the release is published, the direct latest-download links are:
+
+### Android
 `https://github.com/ElnathanCoding/RETINA-Releases/releases/latest/download/RETINA_ANDROID_FINAL.apk`
 
-## Current release identity
+### Windows
+`https://github.com/ElnathanCoding/RETINA-Releases/releases/latest/download/RETINA_WINDOWS_FINAL.zip`
 
-- Application: **RETINA Research Prototype**
-- Platform: **Android**
-- APK filename: `RETINA_ANDROID_FINAL.apk`
+## Final release identities
+
+### Android
+- File: `RETINA_ANDROID_FINAL.apk`
 - SHA-256: `C4DCA6AB7D7A956C6E122850FDA19A635CA8C9A3CF3647CC5AE60587B40ACCF9`
 
-You can verify a downloaded APK on Windows PowerShell with:
-
-```powershell
-Get-FileHash .\RETINA_ANDROID_FINAL.apk -Algorithm SHA256
-```
-
-The resulting hash should match the SHA-256 value above.
+### Windows
+- File: `RETINA_WINDOWS_FINAL.zip`
+- SHA-256: `1B7450B5C91D6A1D99041970094510957AF7EA2F8C3DC23C65EED62B6045402E`
 
 ## Installation
 
-1. Download `RETINA_ANDROID_FINAL.apk` from the latest GitHub Release.
-2. Open the APK on your Android device.
-3. If Android asks for permission to install apps from your browser or file manager, allow it for that source.
-4. Complete the installation.
-5. Launch RETINA.
+### Android
+1. Download `RETINA_ANDROID_FINAL.apk`.
+2. Open the APK on the Android device.
+3. If Android asks for permission to install from the browser/file manager, allow that source.
+4. Complete installation and launch RETINA.
 
-Because the application is distributed outside Google Play, Android may show a sideloading/security warning during installation.
+Because the APK is distributed outside Google Play, Android may show a sideloading/security warning.
+
+### Windows
+1. Download `RETINA_WINDOWS_FINAL.zip`.
+2. Extract the entire ZIP to a folder.
+3. Keep all packaged DLL/runtime files together with the executable.
+4. Launch the RETINA Windows application from the extracted folder.
+
+## Verify downloads
+
+Windows PowerShell:
+
+```powershell
+Get-FileHash .\RETINA_ANDROID_FINAL.apk -Algorithm SHA256
+Get-FileHash .\RETINA_WINDOWS_FINAL.zip -Algorithm SHA256
+```
+
+Compare the results with the SHA-256 values above.
 
 ## Research-use notice
 
 RETINA is a **research and educational prototype**. Its AI-assisted output is **not an independent clinical diagnosis** and must not replace professional retinal examination, clinical judgment, or consultation with a qualified eye-care professional.
 
-## Privacy
+## Privacy and source-code access
 
-The released application is designed for offline inference. Public access to this repository does **not** expose the private RETINA development repository or its source code.
+The released applications are designed for offline inference. Public access to this repository provides the packaged applications only and does **not** provide access to the private RETINA development repository or source code.
 
 ## Redistribution
 
-The APK can be downloaded and shared for research/educational demonstration. Anyone receiving the APK should be given the same research-use notice above.
+The packaged Android and Windows builds may be shared for research/educational demonstration together with the research-use notice above.
 
 ---
 
